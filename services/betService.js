@@ -11,7 +11,7 @@ raceApp.service('betService',function(playerService,$rootScope){
  this.setBettingData = function(bets) {
       
       this.bets=bets;
-       $rootScope.$emit("updatedBetData")
+       $rootScope.$emit("updatedBetData",true)
 }
 this.setWinner=function(winner){
     if(this.winners){
@@ -52,6 +52,8 @@ this.setWinner=function(winner){
         console.log(final_funds)
         playerService.setPlayerData(player_data);
         $rootScope.$emit("updateFunds", final_funds);
+        this.bets=[];
+        $rootScope.$emit("updatedBetData",false)
     }
     
 

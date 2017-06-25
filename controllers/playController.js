@@ -6,7 +6,7 @@ $rootScope.$on("updateFunds",function(event,data){
     $scope.$apply()
 });
 $rootScope.$on("updatedBetData",function(event,data){
-    $scope.isBetPlaced=true;
+    $scope.isBetPlaced=data;
     $scope.$apply()
 })
 $scope.isBetPlaced=false;

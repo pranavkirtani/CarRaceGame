@@ -14,7 +14,9 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.ok()">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.ok()">Bet</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.cancel()">Cancel</button>
       </div>
+      <div class="error" ng-show="error" style="color:red">You dont have sufficient funds</div>
   
 
