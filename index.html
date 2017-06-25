@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="angular-1.6.4/angular-animate.min.js"></script>
+    <script src="angular-1.6.4/angular-touch.min.js"></script>
+    <script src="angular-1.6.4/angular-sanitize.min.js"></script>
+    <script src="node_modules/angular-ui-router.js"></script>
+    <script src="bootstrap/ui-bootstrap.js"></script>
+    <script src="bootstrap/ui-bootstrap-tlps.js"></script>
+     <script src="app.js"></script>
+    <script src="services/playerService.js"></script>
+    <script src="services/betService.js"></script>
+    <script src="services/raceService.js"></script>
+   
+
+    <script src="controllers/playController.js"></script>
+    <script src="controllers/setupController.js"></script>
+    <script src="controllers/ModalController.js"></script>
+</head>
+
+<body ng-app="raceApp">
+    <div class="container raceApp">
+        <div ui-view></div>
+    </div>
+</body>
+</html>

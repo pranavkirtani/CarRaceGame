@@ -1,0 +1,20 @@
+
+
+
+    <!-- Modal content-->
+   
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="$ctrl.cancel()">&times;</button>
+        <h4 class="modal-title" id="modal-title">Place Bet</h4>
+      </div>
+      <div id="modal-body">
+        <div ng-repeat="truck in trucks track by $index" class="modal-body" >
+
+             Truck {{$index+1}} <input type="number" ng-model="data.truck[$index]">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.ok()">Close</button>
+      </div>
+  
+
