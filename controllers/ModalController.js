@@ -1,7 +1,6 @@
 raceApp.controller('ModalController',function($scope,playerService,$state,$uibModalInstance) {
  $scope.trucks=new Array(parseInt(playerService.getPlayerData().trucks));
-console.log("trcuks")
-console.log($scope.trucks)
+
 $scope.data={
  truck:[] 
 }

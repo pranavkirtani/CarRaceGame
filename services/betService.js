@@ -35,6 +35,7 @@ this.setWinner=function(winner){
         }
         
         final_funds=final_funds+(parseInt(fund)*2);///adding winning
+        $rootScope.$emit("winningAmount",parseInt(fund)*2)
       
         for(var j=1;j<this.winners.length;j++){
             
@@ -48,8 +49,6 @@ this.setWinner=function(winner){
         }
        
         player_data.funds=final_funds;
-        console.log("final_funds")
-        console.log(final_funds)
         playerService.setPlayerData(player_data);
         $rootScope.$emit("updateFunds", final_funds);
         this.bets=[];

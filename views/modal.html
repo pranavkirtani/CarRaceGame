@@ -5,18 +5,19 @@
    
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" ng-click="$ctrl.cancel()">&times;</button>
-        <h4 class="modal-title" id="modal-title">Place Bet</h4>
+        <h4 class="modal-title text" id="modal-title">Place Bet</h4>
       </div>
       <div id="modal-body">
-        <div ng-repeat="truck in trucks track by $index" class="modal-body" >
+          <div class="error text-center" ng-show="error" style="color:red">You do not have sufficient funds!!!</div>
+        <div ng-repeat="truck in trucks track by $index" class="modal-body text-center" >
 
              Truck {{$index+1}} <input type="number" ng-model="data.truck[$index]">
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.ok()">Bet</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.cancel()">Cancel</button>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default pull-center" data-dismiss="modal" ng-click="$ctrl.ok()">Bet</button>
+        <button type="button" class="btn btn-default pull-center" data-dismiss="modal" ng-click="$ctrl.cancel()">Cancel</button>
       </div>
-      <div class="error" ng-show="error" style="color:red">You dont have sufficient funds</div>
+    
   
 

@@ -1,7 +1,12 @@
-Name:<input type="text" ng-model="name">
+<form name="userForm">
+<div class="form-group">
+    <label for="Name">Name:</label>
+    <input type="text" class="form-control" ng-model="name" required>
+</div>
+<div class="form-group">
 
-Number of trucks:
-<select ng-model="trucks">
+<label for="Trucks">Number of trucks:</label>
+<select ng-model="trucks" class="form-control" required>
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -9,5 +14,10 @@ Number of trucks:
     <option>5</option>
     <option>6</option>
 </select>
-Initial funds <input type="text" ng-model="funds" >
-<input type="button" ng-click="startGame()" value="Start Game">
+</div>
+<div class="form-group">
+    <label for="Funds">Initial funds</label>
+    <input type="number" ng-model="funds" class="form-control" required>
+</div>
+<input type="button" ng-click="startGame()" value="Start Game" class="btn pull-right" ng-disabled="userForm.$invalid">
+</form>

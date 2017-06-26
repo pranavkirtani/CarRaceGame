@@ -5,7 +5,7 @@ raceApp.service('playerService',function(){
          return this.player
       }
       else{
-          return {name: "userX", trucks: 4, funds: "1000"};
+          return {name: "Player 1", trucks: 4, funds: "1000"};
       }
       
 }

@@ -3,7 +3,6 @@ raceApp.service('raceService',['betService',function(betService){
     this.createTrucks=function(trucks){
        var wd="1000"
        var ht="120"
-       console.log("truck creation incoked")
         var race_div = document.getElementById('racing');
          
          

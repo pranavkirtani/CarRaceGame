@@ -1,15 +1,33 @@
 raceApp.controller('playController',function($scope,playerService,$state,$uibModal,betService,raceService,$rootScope) {
-raceService.createTrucks(playerService.getPlayerData().trucks)
-$scope.amount=playerService.getPlayerData().funds;
+var player=playerService.getPlayerData();
+raceService.createTrucks(player.trucks)
+$scope.amount=player.funds;
+$scope.player_name=player.name;
 $rootScope.$on("updateFunds",function(event,data){
     $scope.amount=data;
     $scope.$apply()
 });
 $rootScope.$on("updatedBetData",function(event,data){
     $scope.isBetPlaced=data;
+    if(data){
+        $scope.won=false;
+    }
+     
     $scope.$apply()
 })
+
+$rootScope.$on("winningAmount",function(event,data){
+    if(data<=0){
+        return;
+    }
+    $scope.won=true;
+    $scope.amount_won=data;
+    $scope.$apply()
+})
+
+
 $scope.isBetPlaced=false;
+$scope.won=false;
  $scope.reset=function(){
     
      $state.go('setup')
@@ -27,8 +45,6 @@ $scope.isBetPlaced=false;
     });
      
     modalInstance.result.then(function (trucks) {
-        console.log("truck bet values")
-        console.log(trucks)
         betService.setBettingData(trucks)
         }, function () {
 

@@ -1,15 +1,24 @@
 
 
-
-    <input type="button" ng-click="reset()" value="Reset">
+<div class="col-md-12 text-center"> 
+    <input type="button" ng-click="reset()" value="Reset" class="btn">
+</div>
 <!--
     Code for truck racing
     
     !-->
+    <div class="col-md-12 text-center" style="color:red;font-size:30px" ng-show="won"> 
+       **** Congratulations !! You won $ {{amount_won}} ****
+    </div>
     <div id="racing" width=1000 height=100>
 
     </div>
-    <input type="button" ng-click="placeBet()" value="Place Bet">
-    <input type="button" ng-click="startRace()" ng-disabled="!isBetPlaced" value="Start Race">
+    
+    <div class="col-md-12 text-center"> 
+         <input type="button" ng-click="placeBet()" value="Place Bet" class="btn">
+        <input type="button" ng-click="startRace()" ng-disabled="!isBetPlaced" value="Start Race" class="btn">
+    </div>
+<div class="pull-right" style="font-size:20px" > <b>$ {{amount}}&nbsp;&nbsp;&nbsp;{{player_name}} </b></div>
+<div class="footer">
 
-<div>{{amount}}</div>
+</div>
